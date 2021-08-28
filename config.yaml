@@ -1,0 +1,27 @@
+customer_service:
+  api_server:
+    host: localhost
+    port: 8080
+  grpc_server:
+    host: localhost
+    port: 2001
+flight_service:
+  api_server:
+    host: localhost
+    port: 8081
+  grpc_server:
+    host: localhost
+    port: 2002
+booking_service:
+  api_server:
+    host: localhost
+    port: 8082
+  grpc_server:
+    host: localhost
+    port: 2003
+postgresql:
+  host: localhost
+  port: 5432
+  db: booking
+  user: postgres
+  pwd: admin

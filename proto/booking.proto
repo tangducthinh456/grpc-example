@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package booking;
+
+import "customer.proto";
+import "flight.proto";
+import "helper.proto";
+
+option go_package = "./;pb";
+
+
+message BookingAssociate {
+    string booking_code = 1;
+    string booking_date = 2;
+    Customer customer = 3;
+    Flight flight = 4;
+}
+
+
+message Booking {
+    string booking_code = 1;
+    string booking_date = 2;
+    string customer_id = 3;
+    string flight_id = 4;
+    string status = 5;
+}
+
+message ListBooking {
+    repeated Booking books = 1;
+}
+
+message RequestViewBooking {
+    string id = 1;
+}
+
+message RequestCancelBooking {
+    string id = 1;
+}
+
+message RequestBooking {
+    string flight_id = 1;
+    string customer_id = 2; 
+}
+
+

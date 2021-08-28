@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package booking;
+
+option go_package = "./;pb";
+
+// import "google/protobuf/any.proto";
+
+message Empty {
+}
+
+message Filter {
+    map<string, string> filters = 3;
+}
+

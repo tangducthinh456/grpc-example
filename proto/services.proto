@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package booking;
+
+import "helper.proto";
+import "flight.proto";
+import "booking.proto";
+import "customer.proto";
+
+option go_package = "./;pb";
+
+
+service CustomerService {
+    rpc CreateCustomer(Customer) returns (Customer);
+    rpc UpdateCustomer(RequestUpdateCustomer) returns (Customer);
+    rpc ChangePassword(RequestChangePasswordCustomer) returns (Empty);
+    rpc SearchCustomer(RequestSearchCustomer) returns(Customer);
+    rpc BookingHistory(RequestBookingHistory) returns (ListBooking);
+}
+
+service FlightService {
+    rpc CreateFlight(Flight) returns (Flight);
+    rpc UpdateFlight(RequestUpdateFlight) returns (Flight);
+    rpc SearchFlight(RequestSearchFlight) returns (Flight);
+}
+
+service BookingService {
+    rpc CreateBooking(RequestBooking) returns (Booking);
+    rpc ViewBooking(RequestViewBooking) returns (Booking);
+    rpc GetBookingByCustomer(RequestViewBooking) returns (ListBooking);
+    rpc CancelBooking(RequestCancelBooking) returns (Empty);
+}

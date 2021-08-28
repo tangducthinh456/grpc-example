@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package booking;
+
+
+option go_package = "./;pb";
+
+
+message RequestUpdateCustomer {
+    string id = 1;
+    Customer customer = 2;
+}
+
+message RequestChangePasswordCustomer {
+    string id = 1;
+    string old_password = 2;
+    string new_password = 3;
+}
+
+message RequestSearchCustomer {
+    string id = 1;
+}
+
+message RequestBookingHistory {
+    string id = 1;
+}
+
+message Customer {
+    string id = 1;
+    string name = 2;
+    string dob = 3;
+    string address = 4;
+    string email = 5;
+    string phone = 6;
+}
