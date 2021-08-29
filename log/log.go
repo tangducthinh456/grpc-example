@@ -22,7 +22,7 @@ func SyslogTimeEncoder(t time.Time, enc zapcore.PrimitiveArrayEncoder) {
 }
 
 func CustomLevelEncoder(level zapcore.Level, enc zapcore.PrimitiveArrayEncoder) {
-	enc.AppendString("[Customer service][" + level.CapitalString() + "]")
+	enc.AppendString("[" + level.CapitalString() + "]")
 }
 
 func ConfigZapWithDebug() *zap.SugaredLogger {

@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "7d6ea51f-e66e-453d-89b1-a3d5d8bd1b63",
+		"name": "Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Create customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"thinhtd update\",\n\t\"date_of_birth\": \"16/12/2000\",\n\t\"address\" : \"ahihih update\",\n\t\"email\" : \"yeee\",\n\t\"phone\" : \"0987654321\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local80}}/",
+							"host": [
+								"{{local80}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"thinhtd update\",\n\t\"date_of_birth\": \"16/12/2000\",\n\t\"address\" : \"ahihih update\",\n\t\"email\" : \"yeee\",\n\t\"phone\" : \"0987654321\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local80}}/0c0fbd33-cef8-4e13-b23f-bb3cb0cb9d5f",
+							"host": [
+								"{{local80}}"
+							],
+							"path": [
+								"0c0fbd33-cef8-4e13-b23f-bb3cb0cb9d5f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"old_password\" : \"1234\",\n    \"new_password\": \"abcd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local80}}/0c0fbd33-cef8-4e13-b23f-bb3cb0cb9d5f/password",
+							"host": [
+								"{{local80}}"
+							],
+							"path": [
+								"0c0fbd33-cef8-4e13-b23f-bb3cb0cb9d5f",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local80}}/0c0fbd33-cef8-4e13-b23f-bb3cb0cb9d5f",
+							"host": [
+								"{{local80}}"
+							],
+							"path": [
+								"0c0fbd33-cef8-4e13-b23f-bb3cb0cb9d5f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flight",
+			"item": [
+				{
+					"name": "create flight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"flight_plane\":\"MH370\",\n\t\"from\":\"MLS leulue\",\n\t\"to\":\"ENG\",\n\t\"depart_date\":\"2016-03-10\",\n\t\"depart_time\":\"08:36:08\",\n\t\"status\":\"BOOKED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local81}}/",
+							"host": [
+								"{{local81}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"flight_plane\":\"MH370\",\n\t\"from\":\"MLS leulue\",\n\t\"to\":\"ENG\",\n\t\"depart_date\":\"2016-03-10\",\n\t\"depart_time\":\"08:36:08\",\n\t\"status\":\"BOOKED UPDATE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local81}}/c14f7efd-4e8a-4cd9-b315-24b3e9a9b19b",
+							"host": [
+								"{{local81}}"
+							],
+							"path": [
+								"c14f7efd-4e8a-4cd9-b315-24b3e9a9b19b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"flight_plane\":\"MH370\",\n\t\"from\":\"MLS leulue\",\n\t\"to\":\"ENG\",\n\t\"depart_date\":\"2016-03-10\",\n\t\"depart_time\":\"08:36:08\",\n\t\"status\":\"BOOKED UPDATE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local81}}/c14f7efd-4e8a-4cd9-b315-24b3e9a9b19b",
+							"host": [
+								"{{local81}}"
+							],
+							"path": [
+								"c14f7efd-4e8a-4cd9-b315-24b3e9a9b19b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"flight_id\":\"e257476b-f1b5-4b8b-a4c9-8de8e8efac62\",\n    \"customer_id\":\"7804fd1a-27f9-4726-9353-c5d73c5c7469\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local82}}/",
+							"host": [
+								"{{local82}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
